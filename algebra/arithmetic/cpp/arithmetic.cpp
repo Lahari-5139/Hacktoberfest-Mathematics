@@ -34,6 +34,12 @@ public:
       return sqrt(val); // gives the wrong value if value < 0 and also return the value in whole number
   }
 
+  /* returns the fourth root of a number*/
+  static int fourth_root(int val)
+  {
+    static int a = square_root(val);
+    return sqrt(a);
+  }
   /*
       returns the sum of digits of a number
   */
@@ -62,6 +68,7 @@ int main() {
   cout<<"cube root of "<<value<<" : "<<arithmetic::cube_root(value)<<endl;
   cout<<"square root of "<<value<<" : "<<arithmetic::square_root(value)<<endl;
   cout<<"sum of "<<value<<" : "<<arithmetic::digit_sum(value)<<endl;
+  cout<<"fourth root of "<<value<<" : "<<arithmetic::fourth_root(value)<<endl;
 
 
   // return 0 to OS for successful execution
